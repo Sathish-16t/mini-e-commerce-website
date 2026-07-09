@@ -1,0 +1,48 @@
+.heading-box{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 10px;
+}
+
+.main-coll-box{
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-sizing: border-box;
+}
+li{
+    list-style:  none;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.top{
+    color: gray;
+}
+.mail-btn-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.mail-btn{
+    width: 100%;
+    max-width: 600px;
+    height: 35px;
+    background-color: white;
+    border: none;
+}
+html{
+    scroll-behavior: smooth;
+}

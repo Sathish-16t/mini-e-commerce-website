@@ -1,0 +1,48 @@
+.banner1{
+width: 300px;    
+    
+}
+.banner-box{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+     animation: spin 15s 2s linear infinite;
+     margin-top: 80px;
+
+}
+
+.slide{
+    display: flex;
+    gap: 2px;
+    overflow-x: hidden;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+.text-box{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 8px;
+   gap: 4px;
+}
+.shop-btn{
+   background-color: white;
+   border: 1px solid gray;
+   padding: 4px 24px;
+   height: 35px;
+   margin-top: 10px;
+   box-sizing: border-box;
+
+}
+@keyframes spin{
+   from{
+transform: translateX(0%);
+   }
+   to{
+    transform: translateX(-50%);
+   }
+}
+
+

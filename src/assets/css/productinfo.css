@@ -1,0 +1,128 @@
+.select-product-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.p-image-box {
+    display: flex;
+    gap: 4px;
+    position: relative;
+}
+
+.left-angle {
+    left: 20%;
+    top: 50%;
+    background-color: black;
+    position: absolute;
+    color: white;
+    padding: 2px 8px;
+    display: flex;
+    border-radius: 5px;
+
+    align-items: center;
+}
+
+.right-angle {
+    right: 20%;
+    top: 50%;
+    position: absolute;
+    background-color: black;
+    color: white;
+    display: flex;
+    padding: 2px 8px;
+    border-radius: 5px;
+    align-items: center;
+
+
+}
+
+
+.selected-box {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    grid-template-columns: 1fr;
+
+}
+
+.select {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    box-sizing: border-box;
+    place-items: center;
+    padding: 10px;
+    margin-top: 85px;
+}
+
+.count-box {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.count-btn {
+    text-align: center;
+    width: 30%;
+    padding: 6px 0;
+    background-color: rgb(88, 88, 12);
+    border: none;
+    color: white;
+
+}
+
+.addcart-btn {
+    padding: 6px 0;
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+.buy-btn {
+    padding: 6px 0;
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+.related-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 4px;
+    width: 100%;
+}
+
+.r-image {
+    height: 300px;
+}
+
+.cart-icon {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 40%;
+    position: fixed;
+    bottom: 8px;
+    right: 10px;
+
+}
+
+@media (min-width:768px) {
+    .related-box {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+
+@media (min-width:1024px) {
+    .related-box {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
