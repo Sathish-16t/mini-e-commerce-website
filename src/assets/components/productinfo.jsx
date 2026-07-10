@@ -35,14 +35,7 @@ function ProductInfo( ){
     const {searchValue,setSearchValue}=useContext(searchContext)
     console.log(searchValue)
     const searchProducts=product.filter((r)=>r.name.toLowerCase().includes(searchValue.toLowerCase()))
-     const cart={
-        id:p.id,
-        name:p.name,
-        price:p.price,
-        description:p.description,
-        image:p.image[0],
-        count:count
-     }
+
     return(
         <div id="select" className="select">
             <Link to={'/'} className="back-btn"> <FaAngleLeft/>Back</Link>
@@ -59,9 +52,11 @@ function ProductInfo( ){
                      <p>USD ${p.price}</p>
                      <p>{p.description}</p>
                      <div className="count-box"><button onClick={()=>setCount(count+1)} className="count-btn">+</button><span>{count}</span><button onClick={()=>setCount(count-1)} className="count-btn">-</button></div>
-        <button className="addcart-btn" onClick={()=>{setCartno(cartno+1),toast.success('Added to cart successfully !'),setcartitems([...cartitems,cart]),console.log(cartitems)}}>
+        <button className="addcart-btn" onClick={()=>{setCartno(cartno+1),toast.success('Added to cart successfully !'),setcartitems([...cartitems,{id:p.id,
+        name:p.name,price:p.price,description:p.description,image:p.image[0],count:count}]),console.log(cartitems)}}>
         Add to Cart</button>
-                     <button className="buy-btn" onClick={()=>{setShowCart(true),setcartitems([...cartitems,cart]),setCartno(cartno+1) }}>Place Order</button>
+                     <button className="buy-btn" onClick={()=>{setShowCart(true),setCartno(cartno+1),setcartitems([...cartitems,{id:p.id,
+        name:p.name,price:p.price,description:p.description,image:p.image[0],count:count}])}}>Place Order</button>
                 </div>
             ))
         }
